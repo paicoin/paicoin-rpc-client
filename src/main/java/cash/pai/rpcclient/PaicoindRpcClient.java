@@ -1466,13 +1466,18 @@ public interface PaicoindRpcClient {
 
    int blocks();
 
+   int headers();
+
    String bestBlockHash();
 
    BigDecimal difficulty();
 
+   long medianTime();
+
    BigDecimal verificationProgress();
 
    String chainWork();
+
  }
 
  static interface DecodedScript extends Serializable {

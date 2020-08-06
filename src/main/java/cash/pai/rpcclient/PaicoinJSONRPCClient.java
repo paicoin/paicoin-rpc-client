@@ -927,7 +927,10 @@ public class PaicoinJSONRPCClient implements PaicoindRpcClient {
       return mapInt("blocks");
     }
 
-    
+    public int headers() {
+      return mapInt("headers");
+    }
+
     public String bestBlockHash() {
       return mapStr("bestblockhash");
     }
@@ -937,7 +940,11 @@ public class PaicoinJSONRPCClient implements PaicoindRpcClient {
       return mapBigDecimal("difficulty");
     }
 
-    
+    public long medianTime() {
+      return mapLong("mediantime");
+    }
+
+
     public BigDecimal verificationProgress() {
       return mapBigDecimal("verificationprogress");
     }
