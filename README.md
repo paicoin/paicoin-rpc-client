@@ -22,5 +22,14 @@
           <version>0.0.1-SNAPSHOT</version>
     </dependency>
     ```
+- 配置RPC链接的服务器 
+
+* Mac OS && Linux <br>
+    1、复制 src/main/resources/paicoin.conf 至 当前用户目录/.paicoin/paicoin.conf<br>
+    2、修改 当前用户目录/.paicoin/paicoin.conf 配置对应的paicoind 服务<br>
+    
+* Windows <br>
+    1、复制 src/main/resources/paicoin.conf 至 AppData/Roaming/Paicoin/paicoin.conf <br>
+    2、修改 AppData/Roaming/Paicoin/paicoin.conf 配置对应的paicoind 服务<br>
 
 
