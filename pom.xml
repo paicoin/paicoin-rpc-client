@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>cash.pai.rpcclient</groupId>
+  <groupId>org.paicoin.rpcclient</groupId>
   <artifactId>paicoin-rpc-client</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -28,8 +28,8 @@
   
   <developers>
     <developer>
-      <name>BigMango.Lee</name>
-      <email>bigmango@ardor.app</email>
+      <name>JinHua</name>
+      <email>mail@jinhua.io</email>
       <organization></organization>
       <organizationUrl></organizationUrl>
       <roles>
