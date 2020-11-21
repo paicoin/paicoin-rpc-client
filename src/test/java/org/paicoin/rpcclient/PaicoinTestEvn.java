@@ -13,9 +13,9 @@ public class PaicoinTestEvn {
 	private static PaicoinTestEvn instence;
 	
 	public boolean testNet = true;
-	public long version = 160100;
+	public long version = 2010000;
 	public long protocolVersion = 70015;
-	public String subversion = "/Turing:0.16.1/";
+	public String subversion = "/Turing:2.1.0/";
 	
 	//钱包余额私钥
 	public String walletBalancePrivKey = "";
