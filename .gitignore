@@ -1,2 +1,10 @@
-target/
-.idea
+*.exe
+*.log
+*.log.*.gz
+*.bak
+.idea/
+debug
+*.cert
+*.key
+.gradle
+build
