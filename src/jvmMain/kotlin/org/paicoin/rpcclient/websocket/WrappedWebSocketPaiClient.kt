@@ -17,6 +17,7 @@
  */
 package org.paicoin.rpcclient.websocket
 
+import com.googlecode.jsonrpc4j.JsonRpcMethod
 import org.paicoin.rpcclient.*
 
 class WrappedWebSocketPaiClient(
@@ -425,5 +426,69 @@ class WrappedWebSocketPaiClient(
         return delegate.renameAccount(oldAccount,newAccount)
     }
 
+    override fun getBlockSubsidy(height: Int, voters: Int): BlockSubsidy {
+        return delegate.getBlockSubsidy(height,voters)
+    }
+
+    override fun ticketBuyerConfig(): TicketBuyerConfig {
+        return delegate.ticketBuyerConfig()
+    }
+
+    override fun startTicketBuyer(
+        fromaccount: String,
+        maintain: Double,
+        passphrase: String?,
+        votingaccount: String?,
+        votingaddress: String?,
+        rewardaddress: String?,
+        poolfeeaddress: String?,
+        poolfees: Double?,
+        limit: Int?,
+        expiry: Int?
+    ) {
+        return delegate.startTicketBuyer(fromaccount,maintain,passphrase,votingaccount,votingaddress,rewardaddress,poolfeeaddress,poolfees,limit,expiry)
+    }
+
+    override fun stopTicketBuyer() {
+        return delegate.stopTicketBuyer()
+    }
+
+    override fun autoVoterConfig(): AutoVoterConfig {
+        return delegate.autoVoterConfig()
+    }
+
+    override fun startAutoVoter(votebits: Int,
+                                votebitsext: String?,
+                                passphrase: String?) {
+        return delegate.startAutoVoter(votebits,votebitsext,passphrase)
+    }
+
+    override fun stopAutoVoter() {
+        return delegate.stopAutoVoter()
+    }
+
+    override fun autoRevokerConfig() : AutoRevokerConfig {
+        return delegate.autoRevokerConfig()
+    }
+
+    override fun startAutoRevoker(passphrase: String?) {
+        return delegate.startAutoRevoker(passphrase)
+    }
+
+    override fun stopAutoRevoker() {
+        return delegate.stopAutoRevoker()
+    }
+
+    override fun setTicketBuyerMaxPerBlock(count: Int) {
+        return delegate.setTicketBuyerMaxPerBlock(count)
+    }
+
+    override fun setTicketFee(fee: Double): Boolean {
+        return delegate.setTicketFee(fee)
+    }
+
+    override fun getTicketFee(): String {
+        return delegate.getTicketFee()
+    }
 
 }

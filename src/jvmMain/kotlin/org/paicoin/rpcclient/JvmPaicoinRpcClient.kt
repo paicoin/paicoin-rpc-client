@@ -395,4 +395,54 @@ interface JvmPaicoinRpcClient : PaicoinRpcClient{
 
     @JsonRpcMethod("renameaccount")
     override fun renameAccount(oldAccount: String, newAccount: String)
+
+    @JsonRpcMethod("getblocksubsidy")
+    override fun getBlockSubsidy(height: Int, voters: Int): BlockSubsidy
+
+    @JsonRpcMethod("ticketbuyerconfig")
+    override fun ticketBuyerConfig(): TicketBuyerConfig
+
+    @JsonRpcMethod("startticketbuyer")
+    override fun startTicketBuyer(romaccount: String,
+                                  maintain: Double,
+                                  passphrase: String?,
+                                  votingaccount: String?,
+                                  votingaddress: String?,
+                                  rewardaddress: String?,
+                                  poolfeeaddress: String?,
+                                  poolfees: Double?,
+                                  limit: Int?,
+                                  expiry: Int?,)
+
+    @JsonRpcMethod("stopticketbuyer")
+    override fun stopTicketBuyer()
+
+    @JsonRpcMethod("autovoterconfig")
+    override fun autoVoterConfig(): AutoVoterConfig
+
+    @JsonRpcMethod("startautovoter")
+    override fun startAutoVoter(votebits: Int,
+                                votebitsext: String?,
+                                passphrase: String?)
+
+    @JsonRpcMethod("stopautovoter")
+    override fun stopAutoVoter()
+
+    @JsonRpcMethod("autorevokerconfig")
+    override fun autoRevokerConfig() : AutoRevokerConfig
+
+    @JsonRpcMethod("startautorevoker")
+    override fun startAutoRevoker(passphrase: String?)
+
+    @JsonRpcMethod("stopautorevoker")
+    override fun stopAutoRevoker()
+
+    @JsonRpcMethod("setticketbuyermaxperblock")
+    override fun setTicketBuyerMaxPerBlock(count: Int)
+
+    @JsonRpcMethod("setticketfee")
+    override fun setTicketFee(fee: Double): Boolean
+
+    @JsonRpcMethod("getticketfee")
+    override fun getTicketFee(): String
 }

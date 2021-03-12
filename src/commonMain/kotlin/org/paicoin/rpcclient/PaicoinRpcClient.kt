@@ -296,5 +296,44 @@ interface PaicoinRpcClient {
 
     fun getNewAddress(account: String): String
 
+    fun getBlockSubsidy(height: Int, voters: Int): BlockSubsidy
+
+    fun ticketBuyerConfig(): TicketBuyerConfig
+
+    fun startTicketBuyer(fromaccount: String,
+                         maintain: Double,
+                         passphrase: String? = "",
+                         votingaccount: String? = "",
+                         votingaddress: String? = "",
+                         rewardaddress: String? = "",
+                         poolfeeaddress: String? = "",
+                         poolfees: Double? = null,
+                         limit: Int? = 1,
+                         expiry: Int? = 144,
+    )
+
+    fun stopTicketBuyer()
+
+    fun autoVoterConfig() : AutoVoterConfig
+
+    fun startAutoVoter(votebits: Int,
+                       votebitsext: String? = "",
+                       passphrase: String? = ""
+    )
+
+    fun stopAutoVoter()
+
+    fun autoRevokerConfig() : AutoRevokerConfig
+
+    fun startAutoRevoker(passphrase: String? = "")
+
+    fun stopAutoRevoker()
+
+    fun setTicketBuyerMaxPerBlock(count: Int)
+
+    fun setTicketFee(fee: Double): Boolean
+
+    fun getTicketFee(): String
+
 
 }

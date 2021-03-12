@@ -391,3 +391,35 @@ data class WalletInfo(
         val total_fees: Double? = null,
         val hdmasterkeyid: String? = null)
 
+data class BlockSubsidy(
+        val pos: Double? = null,
+        val pow: Double? = null,
+        val total: Double? = null)
+
+data class TicketBuyerConfig(
+        val buytickets: Boolean? = null,
+        val account: String? = null,
+        val maintain: Int? = null,
+        val votingAccount: String? = null,
+        val votingAddress: String? = null,
+        val rewardAddress: String? = null,
+        val poolFeeAddress: String? = null,
+        val poolFees: Double? = null,
+        val limit: Int? = null,
+        val minConf: Int? = null,
+        val expiry: Int? = null)
+
+data class AutoVoterConfig(
+        val autovote: Boolean? = null,
+        val votebits: Int? = null,
+        val votebitsext: String? = null)
+
+data class AutoRevokerConfig(
+        val autorevoke: Boolean? = null)
+
+
+
+
+
+
+
